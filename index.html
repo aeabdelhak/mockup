@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script  src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/OwlCarousel/dist/assets/owl.carousel.css">
+    <link rel="stylesheet" href="/OwlCarousel/dist/assets/owl.theme.default.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
+
+        * {
+            font-family: 'Nunito Sans', sans-serif;
+        }
+
+        .activeHash {
+            color: #38adfc;
+            font-weight: bold;
+        }
+
+        .home {
+            height: 40rem;
+            position: relative;
+            background-position: center;
+            background: url("https://source.unsplash.com/1920x1080/?delivery");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: fixed;
+            overflow: hidden;
+        }
+
+        .statisitic {
+            background-position: center;
+            background: url("https://source.unsplash.com/1920x1080/?statistic");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: fixed;
+        }
+
+        .widget {
+            @apply flex flex-col gap-2 items-center
+        }
+    </style>
+
+</head>
+
+<body id="home">
+    <nav navbar class="fixed z-50 top-0 px-4 py-6     w-full  text-white transition-all duration-500 ">
+        <div class=" w-full max-w-6xl px-4 mx-auto uppercase text-sm font-thin flex justify-between ">
+
+            <span class="leading-loose font-bold font-mono "> logo </span>
+            <button onclick="showMenu()" class=" outline-none p-2 md:hidden">
+                <ion-icon name="menu" class=" text-lg"></ion-icon>
+            </button>
+            <ul class="hidden md:flex gap-2     leading-loose space-x-2 justify-end">
+
+                <li class="">
+
+                    <a class="transition-all duration-200 " href="#home">
+                        home</a>
+                </li>
+                <li>
+                    <a class="transition-all duration-200 " href="#aboutUs">
+                        about us
+                    </a>
+                </li>
+                <li>
+                    <a class="transition-all duration-200 " href="#services">
+
+                        services
+                    </a>
+                </li>
+                <li>
+                    <a class="transition-all duration-200 " href="#contact">
+                        contact us</a>
+                </li>
+            </ul>
+          
+        </div>
+
+    </nav>
+    <ul navItems
+    class="hidden   gap-2   text-white bg-black bg-opacity-80 z-50 fixed top-0 left-0 w-full h-full  pt-10  leading-loose space-x-2 backdrop-blur backdrop-filter transition-all duration-500 justify-end">
+    <div class=" flex justify-end md:hidden px-4 ">
+        <button onclick="hideMenu()"
+            class="  z-40 h-8 w-8 border border-gray-300 rounded flex justify-center items-center  outline-none  ">
+            <ion-icon name="close" class=" text-lg"></ion-icon>
+        </button>
+    </div>
+    <li class="text-center py-4 border-b border-gray-500">
+
+        <a class="text-center py-4 " href="#home">
+            home</a>
+    </li>
+    <li class="text-center py-4 border-b border-gray-500">
+        <a class="text-center py-4 " href="#aboutUs">
+            about us
+        </a>
+    </li>
+    <li class="text-center py-4 border-b border-gray-500">
+        <a class="text-center py-4 " href="#services">
+
+            services
+        </a>
+    </li>
+    <li class="text-center py-4 border-b border-gray-500">
+        <a class="text-center py-4 " href="#contact">
+            contact us</a>
+    </li>
+</ul>
+    <section id="home" class="bg-gray-200 relative home">
+        <div class="
+          flex
+          gap-4
+          flex-col
+          justify-center
+          items-center
+          h-full
+          w-full
+          bg-black
+          text-white
+          bg-opacity-80
+          z-0
+        ">
+            <div class="flex flex-col items-center gap-4">
+                <div class="max-w-6xl  gap-4 space-y-2">
+                    <h1 class="text-4xl font-bold   uppercase          text-center
+                ">Lorem ipsum dolor sit amet.</h1>
+                    <p class="text-sm           text-center
+                ">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt,
+                        eaque hic? Quis quam ad dolores voluptatum eos omnis optio porro
+                        odio perspiciatis voluptas ducimus molestiae, cupiditate distinctio
+                        nihil, neque accusamus!
+                    </p>
+
+
+                </div>
+                <div class=" z-20 bg-black p-4 rounded bg-opacity-50 backdrop-filter backdrop-blur">
+                    <div class=" flex gap-2 items-center">
+                        <div class=" p-2 border border-gray-500 flex items-center justify-center rounded ">
+                            <ion-icon name="mail" class="text-white "></ion-icon>
+
+                        </div>
+                        <div class=" ">
+                            <h4 class="text-xs font-bold text-gray-300">contactez nous</h4>
+                            <p class="text-xs whitespace-normal text-gray-400">
+
+                                livraisons@macourse.ma
+                                <button copyBtn
+                                    class=" select-none  mx-1.5 outline-none text-gray-400 text-xs rounded border-gray-300 border w-16 py-1 ">
+                                    coupier
+                                </button>
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class=" absolute  z-10 left-0  bottom-0   w-full  ">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="#fff" fill-opacity="1"
+                    d="M0,224L48,218.7C96,213,192,203,288,208C384,213,480,235,576,224C672,213,768,171,864,165.3C960,160,1056,192,1152,197.3C1248,203,1344,181,1392,170.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+                </path>
+            </svg>
+        </div>
+    </section>
+    <!-- about us -->
+    <section id="aboutUs">
+
+        <div class=" max-w-6xl mx-auto flex flex-col px-4 py-6 ">
+
+            <h2 class="text-2xl text-center font-bold uppercase">A propos de : <span
+                    class="text-blue-500">Macourse</span> </h2>
+            <div class=" flex flex-col lg:flex-row  items-center">
+                <div class=" w-56 h-56 min-w-[14rem]  flex lg:float-left">
+                    <img src="https://source.unsplash.com/1920x1080/?deliver" alt="" class=" object-contain">
+
+                </div>
+                <p class="p-4 leading-8 font-medium tec ">
+                    Le Capital Humain de Ma Course, se compose de 160 jeunes personnes
+                    motivés et réactifs, qui ont acquis un savoir-faire, un savoir être et une habileté leur
+                    permettant
+                    de
+                    s’adapter aux attentes de nos partenaires. Notre équipe est chapeautée par notre Founder Nawfal
+                    Taki
+                    qui
+                    veille au bon achèvement de chaque course et assure un feedback instantané de toute commande.</p>
+            </div>
+
+        </div>
+        <!--  -->
+        <!-- services -->
+        <div id="" class=" max-w-6xl text-center mx-auto gap-6 grid lg:grid-cols-2 p-4">
+            <div class=" p-4    flex gap-2 space-y-2 flex-col ">
+                <div class=" flex flex-col  items-center  gap-2 space-x-2">
+                    <div class="h-20 w-20 flex  justify-center items-center  relative  ">
+                        <div
+                            class=" absolute top-1/2 left-1/2  h-full w-full z-0 transform -translate-x-1/2 -translate-y-1/2 scale-150">
+                            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                                <path fill="#F2F4F8"
+                                    d="M55.6,-49.4C65.7,-31.8,63,-9,57.5,12.2C51.9,33.5,43.5,53.1,26.7,64.7C10,76.3,-15.1,79.8,-35.4,71C-55.7,62.2,-71.3,41,-73.5,20C-75.7,-1,-64.6,-21.8,-50.1,-40.5C-35.7,-59.1,-17.8,-75.6,2.5,-77.5C22.8,-79.5,45.6,-67,55.6,-49.4Z"
+                                    transform="translate(100 100)" />
+                            </svg>
+                        </div>
+                        <ion-icon class=" text-4xl text-blue-500   " name="trophy"></ion-icon>
+
+                    </div>
+                    <h3 class=" font-bold  text-lg    uppercase">Flexibilité </h3>
+                </div>
+                <p class="p-4 text-xs ">
+                    Nous ajustons au mieux nos ressources pour répondre à vos besoins. 7/7.
+
+
+            </div>
+            <div class=" p-4    flex gap-2 space-y-2 flex-col ">
+                <div class=" flex flex-col  items-center  gap-2 space-x-2">
+                    <div class="h-20 w-20 flex  justify-center items-center relative ">
+                        <div
+                            class=" absolute top-1/2 left-1/2  h-full w-full z-0 transform -translate-x-1/2 -translate-y-1/2 scale-150">
+                            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                                <path fill="#F2F4F8"
+                                    d="M55.6,-49.4C65.7,-31.8,63,-9,57.5,12.2C51.9,33.5,43.5,53.1,26.7,64.7C10,76.3,-15.1,79.8,-35.4,71C-55.7,62.2,-71.3,41,-73.5,20C-75.7,-1,-64.6,-21.8,-50.1,-40.5C-35.7,-59.1,-17.8,-75.6,2.5,-77.5C22.8,-79.5,45.6,-67,55.6,-49.4Z"
+                                    transform="translate(100 100)" />
+                            </svg>
+                        </div>
+                        <ion-icon class=" text-4xl text-blue-500  " name="gift"></ion-icon>
+
+                    </div>
+                    <h3 class=" font-bold  text-lg    uppercase ">Gratuité</h3>
+                </div>
+                <p class="p-4 text-xs ">Les Ramassages et Livraisons sont effectués sans vous facturer des « Extras »
+            </div>
+            <div class=" p-4    flex gap-2 space-y-2 flex-col ">
+                <div class=" flex flex-col  items-center  gap-2 space-x-2">
+                    <div class="h-20 w-20 flex  justify-center items-center  relative  ">
+                        <div
+                            class=" absolute top-1/2 left-1/2  h-full w-full z-0 transform -translate-x-1/2 -translate-y-1/2 scale-150">
+                            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                                <path fill="#F2F4F8"
+                                    d="M55.6,-49.4C65.7,-31.8,63,-9,57.5,12.2C51.9,33.5,43.5,53.1,26.7,64.7C10,76.3,-15.1,79.8,-35.4,71C-55.7,62.2,-71.3,41,-73.5,20C-75.7,-1,-64.6,-21.8,-50.1,-40.5C-35.7,-59.1,-17.8,-75.6,2.5,-77.5C22.8,-79.5,45.6,-67,55.6,-49.4Z"
+                                    transform="translate(100 100)" />
+                            </svg>
+                        </div>
+                        <ion-icon class=" text-4xl text-blue-500  " name="fastforward"></ion-icon>
+
+                    </div>
+                    <h3 class=" font-bold  text-lg    uppercase">Rapidité</h3>
+                </div>
+                <p class="p-4 text-xs ">Vos colis livrés en « J+1 » après réception. Vos Retours de Fonds vous sont
+                    remis 10
+                    jours ouvrables après livraisons.
+
+
+            </div>
+            <div class=" p-4    flex gap-2 space-y-2 flex-col ">
+                <div class=" flex flex-col  items-center  gap-2 space-x-2">
+                    <div class="h-20 w-20 flex  justify-center items-center relative  ">
+                        <div
+                            class=" absolute top-1/2 left-1/2  h-full w-full z-0 transform -translate-x-1/2 -translate-y-1/2 scale-150">
+                            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                                <path fill="#F2F4F8"
+                                    d="M55.6,-49.4C65.7,-31.8,63,-9,57.5,12.2C51.9,33.5,43.5,53.1,26.7,64.7C10,76.3,-15.1,79.8,-35.4,71C-55.7,62.2,-71.3,41,-73.5,20C-75.7,-1,-64.6,-21.8,-50.1,-40.5C-35.7,-59.1,-17.8,-75.6,2.5,-77.5C22.8,-79.5,45.6,-67,55.6,-49.4Z"
+                                    transform="translate(100 100)" />
+                            </svg>
+                        </div>
+                        <ion-icon class=" text-4xl text-blue-500  " name="lock"></ion-icon>
+
+                    </div>
+                    <h3 class=" font-bold  text-lg    uppercase">Sécurité</h3>
+                </div>
+                <p class="p-4 text-xs ">Tous vos colis sont transportés, entreposés et acheminés avec un soin
+                    particulier
+                    vers leurs destinations finales.
+            </div>
+        </div>
+        <!--  -->
+        <!-- nos Services -->
+    </section>
+
+    <section id='services'>
+        <div class="bg-[#0099ff] relative">
+
+
+
+            <div class="flex text-white flex-col py-10 p-4 max-w-6xl mx-auto relative gap-4">
+                <h2 class="text-2xl text-center font-bold uppercase">nos services</h2>
+
+                <p class="p-4 leading-8 text-center ">
+                    Avec Ma course, soyez assurés d’avoir à vos côtés des spécialistes des services d’expédition et de
+                    livraison
+                    au Maroc. Avec notre large gamme de services de colis express et courses, nous nous occupons de
+                    collecter,
+                    transporter et livrer les colis, les courriers et les marchandises entre particuliers, sociétés ou
+                    autres.
+                </p>
+
+                <div class=" lg:grid-cols-4 md:grid-cols-2 grid  gap-4 p-4">
+                    <div class="flex flex-col gap-2 items-center  ">
+                        <ion-icon class=" text-6xl text-slate-100   " name="trophy"></ion-icon>
+                        <h3 class="text-lg font-bold uppercase">
+                            Confirmation
+                        </h3>
+                        <p class=" text-xs text-gray-200 text-center">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, quaerat. Unde consectetur
+                            nihil
+                            nobis
+                            ab debitis maxime, animi, perferendis aliquid, ullam aspernatur enim porro totam tempora
+                            ipsam
+                            alias
+                            voluptates repudiandae!
+                        </p>
+                    </div>
+                    <div class="flex flex-col gap-2 items-center  ">
+                        <ion-icon class=" text-6xl text-slate-100   " name="trophy"></ion-icon>
+                        <h3 class="text-lg font-bold uppercase">
+                            Traçabilité
+                        </h3>
+                        <p class=" text-xs text-gray-200 text-center">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, quaerat. Unde consectetur
+                            nihil
+                            nobis
+                            ab debitis maxime, animi, perferendis aliquid, ullam aspernatur enim porro totam tempora
+                            ipsam
+                            alias
+                            voluptates repudiandae!
+                        </p>
+                    </div>
+                    <div class="flex flex-col gap-2 items-center  ">
+                        <ion-icon class=" text-6xl text-slate-100   " name="trophy"></ion-icon>
+                        <h3 class="text-lg font-bold uppercase">
+                            Relance
+                        </h3>
+                        <p class=" text-xs text-gray-200 text-center">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, quaerat. Unde consectetur
+                            nihil
+                            nobis
+                            ab debitis maxime, animi, perferendis aliquid, ullam aspernatur enim porro totam tempora
+                            ipsam
+                            alias
+                            voluptates repudiandae!
+                        </p>
+                    </div>
+                    <div class="flex flex-col gap-2 items-center  ">
+                        <ion-icon class=" text-6xl text-slate-100   " name="trophy"></ion-icon>
+                        <h3 class="text-lg font-bold uppercase">
+                            Acheminement 24/24
+                        </h3>
+                        <p class=" text-xs text-gray-200 text-center">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, quaerat. Unde consectetur
+                            nihil
+                            nobis
+                            ab debitis maxime, animi, perferendis aliquid, ullam aspernatur enim porro totam tempora
+                            ipsam
+                            alias
+                            voluptates repudiandae!
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="   rotate-180     ">
+
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                    <path fill="#fff" fill-opacity="1"
+                        d="M0,160L80,170.7C160,181,320,203,480,197.3C640,192,800,160,960,165.3C1120,171,1280,213,1360,234.7L1440,256L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z">
+                    </path>
+                </svg>
+            </div>
+        </div>
+        <!-- testimony -->
+        <div class="flex  py-10 flex-col p-4 max-w-6xl mx-auto gap-4">
+            <h2 class="text-2xl text-center font-bold uppercase">CE QU'ON DIT DE NOUS
+            </h2>
+            <div id="testimonies" class="owl-carousel  py-6  ">
+
+            </div>
+        </div>
+        <!--  -->
+        <!-- partners -->
+        <div class="flex  flex-col p-4 py-10 max-w-6xl mx-auto gap-4">
+            <h2 class="text-2xl text-center font-bold uppercase">ILS NOUS FONT CONFIANCE
+
+            </h2>
+            <div id="partners" class="owl-carousel  py-6 ">
+
+
+            </div>
+        </div>
+        <!--  -->
+        <!-- footer -->
+    </section>
+
+    <footer id="contact" class="bg-gray-900  ">
+        <div class="   relative -top-2 ">
+
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="#fff" fill-opacity="1"
+                    d="M0,160L48,138.7C96,117,192,75,288,80C384,85,480,139,576,154.7C672,171,768,149,864,154.7C960,160,1056,192,1152,208C1248,224,1344,224,1392,224L1440,224L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z">
+                </path>
+            </svg>
+        </div>
+        <div class=" max-w-6xl py-16 p-4 mx-auto grid lg:grid-cols-2 gap-6">
+            <div class="flex gap-6 flex-col">
+                <h2 class=" text-xl text-yellow-50 underline underline-offset-8 font-bold">
+                    Macourse</h2>
+                <p class=" text-xs text-gray-400 py-3 font-medium ">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad repellat dolorem et! Repellendus,
+                    velit? Natus eaque iste eligendi, nobis suscipit eos maiores iure velit provident quos beatae,
+                    maxime repellat voluptatem.
+                </p>
+                <div class="flex">
+                    <ion-icon name="logo-facebook" class="text-white"></ion-icon>
+                    <ion-icon name="logo-linkedin" class="text-white"></ion-icon>
+                    <ion-icon name="logo-twitter" class="text-white"></ion-icon>
+                    <ion-icon name="logo-whatsapp" class="text-white"></ion-icon>
+                </div>
+            </div>
+            <div class=" flex flex-col gap-6">
+                <h2 class=" text-xl text-yellow-50 underline underline-offset-8 font-bold">
+                    NOUS CONTACTER
+                </h2>
+                <div class="flex gap-4  flex-col">
+                    <div class=" flex gap-2 items-center">
+                        <div class=" p-2 border border-gray-500 flex items-center justify-center rounded ">
+                            <ion-icon name="pin" class="text-white "></ion-icon>
+
+                        </div>
+                        <div class="">
+                            <h4 class="text-xs font-bold text-gray-300">ADDRESS</h4>
+                            <p class="text-xs whitespace-normal text-gray-400">
+
+                                13 Rue Ahmed El Majati, Résidence les Alpes, N°8, Maarif, Casablanca.
+                            </p>
+                        </div>
+                    </div>
+                    <div class=" flex gap-2 items-center">
+                        <div class=" p-2 border border-gray-500 flex items-center justify-center rounded ">
+                            <ion-icon name="call" class="text-white "></ion-icon>
+
+                        </div>
+                        <div class="">
+                            <h4 class="text-xs font-bold text-gray-300">PHONE</h4>
+                            <p class="text-xs whitespace-normal text-gray-400">
+
+                                +212 520 65 46 55
+                            </p>
+                        </div>
+                    </div>
+                    <div class=" flex gap-2 items-center">
+                        <div class=" p-2 border border-gray-500 flex items-center justify-center rounded ">
+                            <ion-icon name="mail" class="text-white "></ion-icon>
+
+                        </div>
+                        <div class="">
+                            <h4 class="text-xs font-bold text-gray-300">PHONE</h4>
+                            <p class="text-xs whitespace-normal text-gray-400">
+
+                                livraisons@macourse.ma
+                                <button copyBtn
+                                    class=" select-none  mx-1.5 outline-none text-gray-400 text-xs rounded border-gray-300 border px-2 py-1">
+                                    coupier
+                                </button>
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class=""></div>
+        </div>
+    </footer>
+
+    <!--  -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="OwlCarousel/dist/owl.carousel.js"></script>
+
+    <script src="/dist/script.js"></script>
+    <script src="/dist/testimony.js"></script>
+    <script src="/dist/partners.js"></script>
+</body>
+
+</html>
