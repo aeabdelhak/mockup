@@ -1,9 +1,9 @@
 checkScroll();
 function checkScroll() {
    
-        if (window.scrollY > 100 )$("[navbar]").addClass("bg-opacity-80 bg-black backdrop-filter backdrop-blur  shadow");
+        if (window.scrollY > 100 )$("[navbar]").addClass(" backdrop-filter backdrop-blur  shadow");
   else {
-    $("[navbar]").removeClass("bg-opacity-80 bg-black backdrop-filter backdrop-blur shadow");
+    $("[navbar]").removeClass(" backdrop-filter backdrop-blur shadow");
   }
     
 
@@ -62,7 +62,7 @@ $("[copyBtn]").click(function () {
   setTimeout(() => {
     $(this).html("coupier");
   }, 2000);
-  navigator.clipboard.writeText("livraisons@macourse.ma");
+  navigator.clipboard.writeText("contact@zagoraway.ma");
 });
 $(document).on("click", 'a[href^="#"]', function (event) {
   event.preventDefault();
